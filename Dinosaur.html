@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinosaur</title>
+    <style>
+        @font-face {
+            font-family: SDV;
+            src: url(pixelmix.ttf);
+        }
+        .border {
+            position: absolute;
+            margin-left: 180px;
+            height: 180px;
+            width: 250px;
+            border-bottom: 5px double black;
+            border-right: 5px double black;
+            margin-top: 90px;
+        }
+        * {
+            font-family: SDV;
+        }
+        body {
+            margin: 0px;
+        }
+
+        h1 {
+            font-size: 80px;
+            margin-top: 10px;
+            border-bottom: 5px double black;
+            text-align: center;
+            width: 1440px;
+            padding-bottom: 10px;
+        }
+
+        .images {
+            position: absolute;
+            margin-left: 220px;
+            margin-top: -40px;
+        }
+
+        ol {
+            width: 80px;
+            border-right: 5px double black;
+            font-size: 20px;
+            margin-top: -55px;
+            margin-left: 20px;
+            height: 715px;
+            position: absolute;
+            width: 120px;
+
+
+        }
+
+        .product-table {
+            position: absolute;
+            margin-left: 1000px;
+            margin-top: 130px;
+            text-align: center;
+            transform: translate(-40px);
+        }
+        table,
+        th,
+        td {
+            border: 2px black double;
+        }
+
+        .egg-icon {
+            transform: translateY(15px);
+        }
+
+        .quality-stars {
+            transform: translate(10px);
+
+        }
+
+        a {
+            text-decoration: none;
+            color: Black;
+        }
+
+        .Dinosaur {
+            color: Red;
+        }
+
+        .product-name {
+            font-size: 20px;
+            width: 200px;
+        }
+
+        .place {
+            position: absolute;
+            margin-left: 580px;
+            margin-top: 200px;
+        }
+
+        .heartimg {
+            width: 150px;
+            margin-left: 70px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .heart {
+            position: absolute;
+            margin-top: 285px;
+            margin-left: 225px;
+        }
+
+        .artisan-table {
+            position: absolute;
+            margin-left: 200px;
+            margin-top: 550px;
+        }
+
+        .inf-text {
+            padding: 5px 5px 5px 5px;
+            text-overflow: ellipsis;
+            line-height: 17px;
+        }
+        .heart-text{
+            padding: 5px 5px 5px 5px;
+            text-overflow: ellipsis;
+            line-height: 20px;
+        }
+
+        .artisan_Machine {
+            width: 17%;
+            margin-left: 35px;
+        }
+
+        .artisan_images {
+            margin-left: 55px;
+        }
+
+        .artisan {
+            margin-left: 35px;
+        }
+
+        .product_price {
+            height: 200px;
+            padding-bottom: 15px;
+            width: 400px;
+        }
+        .animal_price{
+            position: absolute;
+            margin-left: 750px;
+            margin-top: 530px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="border-second"></div>
+    <div class="border"></div>
+    <table class="artisan-table">
+        <tr>
+            <td>
+                <div class="artisan_images"><img src="Dinosaur Egg.png" width="100px" height="100px"
+                        class="Dinosaur-Egg"><img src="Mayonnaise Machine.webp" class="artisan_Machine"><img
+                        src="Dinosaur Mayonnaise.webp" width="100px" height="100px" class="artisan"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="inf-text">The dinosaur can produce a dinosaur <br>egg every seven days and can be <br>placed in Mayonnaise Machine to produce <br>Dinosaur Mayonnaise and sold for 800g
+            </td>
+        </tr>
+    </table>
+    <table class="heart">
+        <tr>
+            <td><img src="heart.png" class="heartimg"></td>
+        </tr>
+        <tr>
+            <td class="heart-text">They produce high quality <br>dinosaur eggs when they <br>have sufficient happiness</td>
+        </tr>
+    </table>
+    <table class="place">
+        <tr>
+            <td><img src="Big Coop.png" style="margin-left: 45px; margin-top: 5px; margin-bottom: 5px;"></td>
+        </tr>
+        <tr>
+            <td class="inf-text">Dinosaur lives in Big Coop</td>
+        </tr>
+    </table>
+    <table class="product-table">
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th style="width: 30%;">Price</th>
+        </tr>
+        <tr>
+            <td><img src="Dinosaur Egg.png" style="width: 80%;">
+            </td>
+            <td class="product-name">Dinosaur Egg</td>
+            <td class="product_price"><img src="Dinosaur Egg.png" class="egg-icon">350g<br><img src="Silver Star.webp"
+                    class="quality-stars">437g<br><img src="Gold Star.webp" class="quality-stars">525g<br><img
+                    src="Iridium Star.webp" class="quality-stars">700g</td>
+        </tr>
+    </table>
+    <table class="animal_price">
+        <tr>
+            <td><img src="Dinosaur Egg.png" class="pt_egg" style="width: 23%; margin-left: 50px; padding-bottom: 20px;">
+                <img src="Incubator.webp" class="pt_incubator"style="width:15%; margin-left: 50px;">
+                <img src="Dinosaur.png" class="pt_dinosaur" style="width: 23%; margin-left: 50px; padding-bottom: 40px;"> </td>
+        </tr>
+        <tr>
+            <td class="inf-text"> Can be hatched by placing a Dinosaur Egg into an Incubator
+        </tr>
+    </table>
+
+    <h1>Dinosaur</h1>
+    <div id="images-group">
+        <img src="Dinosaur.png" class="images" id="Dinosaur" width="13%">
+    </div>
+    <ol>
+        <br>
+        <li><a href="Chicken.html" class="Chicken"> Chicken </a> </li> <br><br>
+        <li><a href="Duck.html" class="Duck"> Duck</a> </li><br><br>
+        <li><a href="Dinosaur.html" class="Dinosaur">Dinosaur</a> </li><br><br>
+        <li><a href="Rabbit.html" class="Rabbit">Rabbit</a> </li><br><br>
+        <li><a href="Cow.html" class="Cow">Cow</a> </li><br><br>
+        <li><a href="Goat.html" class="Goat">Goat</a> </li><br><br>
+        <li><a href="Sheep.html" class="Sheep">Sheep</a> </li><br><br>
+        <li><a href="Pig.html" class="Pig">Pig</a> </li><br><br>
+    </ol>
+
+
+
+    <!-- Can be hatched by placing a Dinosaur Egg into an Incubator
+        Building is Big Coop
+        The dinosaur can produce a dinosaur egg every seven days
+        They produce high quality dinosaur eggs when they have sufficient happiness
+        The dinosaur eggs can be placed in Mayonnaise Machine to produce Dinosaur Mayonnaise and sold for 800g
+        Duck Egg Price:
+                    Small:
+                            350g
+                            437g
+                            525g
+                            700g
+    -->
+</body>
+
+</html>

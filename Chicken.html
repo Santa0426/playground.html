@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken</title>
+    <style>
+        @font-face {
+            font-family: SDV;
+            src: url(pixelmix.ttf);
+        }
+        .border {
+            position: absolute;
+            margin-left: 180px;
+            height: 180px;
+            width: 750px;
+            border-bottom: 5px double black;
+            border-right: 5px double black;
+            margin-top: 90px;
+        }
+        * {
+            font-family: SDV;
+        }
+        body {
+            margin: 0px;
+        }
+
+        h1 {
+            font-size: 80px;
+            margin-top: 10px;
+            border-bottom: 5px double black;
+            text-align: center;
+            width: 1440px;
+            padding-bottom: 10px;
+        }
+
+        .images {
+            position: absolute;
+            margin-left: 240px;
+            margin-top: -40px;
+        }
+
+        ol {
+            width: 80px;
+            border-right: 5px double black;
+            font-size: 20px;
+            margin-top: -55px;
+            margin-left: 20px;
+            height: 715px;
+            position: absolute;
+            width: 120px;
+
+
+        }
+
+        #Brown-Chicken,
+        #Blue-Chicken{
+            margin-left: 470px;
+        }
+
+        #Blue-Chicken {
+            margin-left: 710px;
+        }
+
+        .product-table {
+            position: absolute;
+            margin-left: 960px;
+            margin-top: 100px;
+            text-align: center;
+        }
+        table,
+        th,
+        td {
+            border: 2px black double;
+        }
+
+        .egg-icon {
+            transform: translateY(15px);
+        }
+
+        .quality-stars {
+            transform: translate(10px);
+
+        }
+
+        a {
+            text-decoration: none;
+            color: Black;
+        }
+
+        .Chicken {
+            color: Red;
+        }
+
+        .product-name {
+            font-size: 20px;
+            padding-left: 10px;
+        }
+
+        .place {
+            position: absolute;
+            margin-left: 210px;
+            margin-top: 290px;
+        }
+
+        .heartimg {
+            width: 150px;
+            margin-left: 40px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .heart {
+            position: absolute;
+            margin-top: 520px;
+            margin-left: 470px;
+        }
+
+        .artisan-table {
+            position: absolute;
+            margin-left: 750px;
+            margin-top: 580px;
+        }
+
+        .inf-text {
+            padding: 5px 5px 5px 5px;
+            text-overflow: ellipsis;
+            line-height: 17px;
+        }
+
+        .artisan_Machine {
+            width: 52.8px;
+            height: 105.6px;
+            margin-left: 30px;
+        }
+
+        .artisan_images {
+            margin-left: 40px;
+        }
+
+        .artisan {
+            margin-left: 30px;
+        }
+
+        .product_price {
+            height: 200px;
+            padding-bottom: 15px;
+        }
+        .animal_price{
+            position: absolute;
+            margin-left: 700px;
+            margin-top: 290px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="border-second"></div>
+    <div class="border"></div>
+    <table class="artisan-table">
+        <tr>
+            <td>
+                <div class="artisan_images"><img src="Big White Egg.png" width="100px" height="100px"
+                        class="White_egg"><img src="Mayonnaise Machine.webp" class="artisan_Machine"><img
+                        src="Mayonnaise.webp" width="100px" height="100px" class="artisan"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="inf-text">The adult chicken can produce an egg <br>every morning and it can be placed in
+                <br>Mayonnaise Machine to produce <br>Mayonnaise and sold for 190g to 285g <br>depending on the quality
+            </td>
+        </tr>
+    </table>
+    <table class="heart">
+        <tr>
+            <td><img src="heart.png" class="heartimg"></td>
+        </tr>
+        <tr>
+            <td class="inf-text">Chickens produce <br>large and high <br>quality eggs when<br> they have sufficient
+                <br>happiness</td>
+        </tr>
+    </table>
+    <table class="place">
+        <tr>
+            <td><img src="Coop.png" style="margin-left: 25px; margin-top: 5px; margin-bottom: 5px;"></td>
+        </tr>
+        <tr>
+            <td class="inf-text">Chicken lives in Coop</td>
+        </tr>
+    </table>
+    <table class="product-table">
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th style="width: 30%;">Price</th>
+        </tr>
+        <tr>
+            <td><img src="Small White Egg.png"><br><br>
+                <img src="Small Brown Egg.png">
+            </td>
+            <td class="product-name">White Egg <br><br><br> Brown Egg</td>
+            <td class="product_price"><img src="Small White Egg.png" class="egg-icon">50g<br><img src="Silver Star.webp"
+                    class="quality-stars">62g<br><img src="Gold Star.webp" class="quality-stars">75g<br><img
+                    src="Iridium Star.webp" class="quality-stars">100g</td>
+        </tr>
+        <tr>
+            <td><img src="Big White Egg.png"><br><br>
+                <img src="Big Brown Egg.png">
+            </td>
+            <td class="product-name">Large White Egg <br><br><br> Large Brown Egg</td>
+            <td class="product_price"><img src="Big White Egg.png" class="egg-icon">95g<br><img src="Silver Star.webp"
+                    class="quality-stars">118g<br><img src="Gold Star.webp" class="quality-stars">142g<br><img
+                    src="Iridium Star.webp" class="quality-stars">190g</td>
+        </tr>
+    </table>
+    <table class="animal_price">
+        <tr>
+            <td><img src="Gold.png" width="150px" height="150px" style="margin-left: 10px;"></td>
+        </tr>
+        <tr>
+            <td class="inf-text">The price of <br>Chicken is 800g</td>
+        </tr>
+    </table>
+
+    <h1>Chicken</h1>
+    <div id="images-group">
+        <img src="White Chicken.png" class="images" id="White-Chicken" width="10%">
+        <img src="Brown Chicken.png" class="images" id="Brown-Chicken" width="10%">
+        <img src="Blue Chicken.png" class="images" id="Blue-Chicken" width="10%">
+    </div>
+    <ol>
+        <br>
+        <li><a href="Chicken.html" class="Chicken"> Chicken </a> </li> <br><br>
+        <li><a href="Duck.html" class="Duck"> Duck</a> </li><br><br>
+        <li><a href="Dinosaur.html" class="Dinosaur">Dinosaur</a> </li><br><br>
+        <li><a href="Rabbit.html" class="Rabbit">Rabbit</a> </li><br><br>
+        <li><a href="Cow.html" class="Cow">Cow</a> </li><br><br>
+        <li><a href="Goat.html" class="Goat">Goat</a> </li><br><br>
+        <li><a href="Sheep.html" class="Sheep">Sheep</a> </li><br><br>
+        <li><a href="Pig.html" class="Pig">Pig</a> </li><br><br>
+    </ol>
+
+
+
+    <!-- Price is 800g
+        Building is Coop
+        The adult chicken can produce an egg every morning
+        They produce larger eggs when they have sufficient happiness
+        The eggs can be placed in Mayonnaise Machine to produce Mayonnaise and sold for 190g to 285g depending on the quality
+        Egg Price:
+                    Small:
+                            50g
+                            62g
+                            75g
+                            100g
+                    Large:
+                            95g
+                            118g
+                            142g
+                            190g
+    -->
+</body>
+
+</html>
