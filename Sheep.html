@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheep</title>
+    <style>
+        @font-face {
+            font-family: SDV;
+            src: url(pixelmix.ttf);
+        }
+        .border {
+            position: absolute;
+            margin-left: 180px;
+            height: 190px;
+            width: 260px;
+            border-bottom: 5px double black;
+            border-right: 5px double black;
+            margin-top: 90px;
+        }
+        * {
+            font-family: SDV;
+        }
+        body {
+            margin: 0px;
+        }
+
+        h1 {
+            font-size: 80px;
+            margin-top: 10px;
+            border-bottom: 5px double black;
+            text-align: center;
+            width: 1440px;
+            padding-bottom: 10px;
+        }
+
+        .images {
+            position: absolute;
+            margin-left: 230px;
+            margin-top: -40px;
+        }
+
+        ol {
+            width: 80px;
+            border-right: 5px double black;
+            font-size: 20px;
+            margin-top: -55px;
+            margin-left: 20px;
+            height: 715px;
+            position: absolute;
+            width: 120px;
+
+
+        }
+
+        .product-table {
+            position: absolute;
+            margin-left: 950px;
+            margin-top: 130px;
+            text-align: center;
+        }
+        table,
+        th,
+        td {
+            border: 2px black double;
+        }
+
+        .egg-icon {
+            transform: translateY(15px);
+        }
+
+        .quality-stars {
+            transform: translate(10px);
+
+        }
+
+        a {
+            text-decoration: none;
+            color: Black;
+        }
+
+        .Sheep {
+            color: Red;
+        }
+
+        .product-name {
+            font-size: 20px;
+            padding-left: 10px;
+        }
+
+        .place {
+            position: absolute;
+            margin-left: 600px;
+            margin-top: 200px;
+        }
+
+        .heartimg {
+            width: 150px;
+            margin-left: 80px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        .heart {
+            position: absolute;
+            margin-top: 520px;
+            margin-left: 400px;
+        }
+
+        .artisan-table {
+            position: absolute;
+            margin-left: 800px;
+            margin-top: 490px;
+        }
+
+        .inf-text {
+            padding: 5px 5px 5px 5px;
+            text-overflow: ellipsis;
+            line-height: 17px;
+        }
+        .heart-text{
+            padding: 5px 5px 5px 5px;
+            text-overflow: ellipsis;
+            line-height: 20px;
+        }
+
+        .artisan_Machine {
+            width: 100px;
+            margin-left: 30px;
+        }
+
+        .artisan_images {
+            margin-bottom: 60px;
+            margin-left: 50px;
+            height: 150px;
+            margin-top: -20px;
+        }
+
+        .artisan {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+
+        .product_price {
+            height: 200px;
+            padding-bottom: 15px;
+            padding-right: 25px;
+        }
+        .animal_price{
+            position: absolute;
+            margin-left: 300px;
+            margin-top: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="border-second"></div>
+    <div class="border"></div>
+    <table class="artisan-table">
+        <tr>
+            <td>
+                <div class="artisan_images"><img src="Wool.png" width="110px" height="110px" style="margin-bottom: 10px;">
+                    <img src="Loom.webp" class="artisan_Machine"><img
+                        src="Cloth.webp" width="125px" height="110px" class="artisan"></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="inf-text">The adult sheep can produce wool when their<br> coat grows and the wool can be placed in loom <br>to produce cloth and sold for 470g
+            </td>
+        </tr>
+    </table>
+    <table class="heart">
+        <tr>
+            <td><img src="heart.png" class="heartimg"></td>
+        </tr>
+        <tr>
+            <td class="heart-text"> Sheep produce high quality <br>wool when they have <br>sufficient happiness</td>
+        </tr>
+    </table>
+    <table class="place">
+        <tr>
+            <td><img src="Deluxe Barn.png" style="margin-left: 50px; margin-bottom: 10px; width: 200px; margin-top: 10px;"></td>
+        </tr>
+        <tr>
+            <td class="inf-text">Sheep lives in Deluxe Barn</td>
+        </tr>
+    </table>
+    <table class="product-table">
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th style="width: 30%;">Price</th>
+        </tr>
+        <tr>
+            <td><img src="Wool.png" style="width: 125px;">
+            </td>
+            <td class="product-name">Wool</td>
+            <td class="product_price"><img src="Wool.png" class="egg-icon">340g<br><img src="Silver Star.webp"
+                    class="quality-stars">425g<br><img src="Gold Star.webp" class="quality-stars">510g<br><img
+                    src="Iridium Star.webp" class="quality-stars">680g</td>
+        </tr>
+    </table>
+    <table class="animal_price">
+        <tr>
+            <td><img src="Gold.png" width="150px" height="150px" style="margin-left: 5px;"></td>
+        </tr>
+        <tr>
+            <td class="inf-text">The price of <br>sheep is 8,000g</td>
+        </tr>
+    </table>
+
+    <h1>Sheep</h1>
+    <div id="images-group">
+        <img src="Sheep.png" class="images" id="Sheep" width="13%">
+    </div>
+    <ol>
+        <br>
+        <li><a href="Chicken.html" class="Chicken"> Chicken </a> </li> <br><br>
+        <li><a href="Duck.html" class="Duck"> Duck</a> </li><br><br>
+        <li><a href="Dinosaur.html" class="Dinosaur">Dinosaur</a> </li><br><br>
+        <li><a href="Rabbit.html" class="Rabbit">Rabbit</a> </li><br><br>
+        <li><a href="Cow.html" class="Cow">Cow</a> </li><br><br>
+        <li><a href="Goat.html" class="Goat">Goat</a> </li><br><br>
+        <li><a href="Sheep.html" class="Sheep">Sheep</a> </li><br><br>
+        <li><a href="Pig.html" class="Pig">Pig</a> </li><br><br>
+    </ol>
+
+
+
+    <!-- Price is 8,000g
+        Building is Deluxe Barn
+        The adult sheep can produce wool when their coat grows and the wool can be placed in loom to produce cloth and sold for 470g
+        They produce high quality wool when they have sufficient happiness
+        wool Price:
+                    milk:
+                            340g
+                            425g
+                            510g
+                            680g
+    -->
+</body>
+
+</html>
