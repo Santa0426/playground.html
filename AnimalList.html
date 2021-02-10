@@ -39,6 +39,7 @@
         }
 
 
+
     </style>
 
 
@@ -47,10 +48,10 @@
 <body>
             <table id="cooptable">
                 <tr>
-                    <th><a href="Chicken.html"><img src="White Chicken.png" class="Chicken" width="45%"></a></th>
-                    <th><a href="Duck.html"><img src="Duck.png" class="Duck" width="75%"></a></th>
-                    <th><a href="Dinosaur.html"><img src="Dinosaur.png" class="Dinosaur" width="45%"></a></th>
-                    <th><a href="Rabbit.html"><img src="Rabbit.png" class="Rabbit" width="65%"></a></th>
+                    <th><a href="Chicken.html"><img src="White Chicken.png" class="coopanimal" id="Chicken" width="45%"></a></th>
+                    <th><a href="Duck.html"><img src="Duck.png" class="coopanimal" id="Duck" width="75%"></a></th>
+                    <th><a href="Dinosaur.html"><img src="Dinosaur.png" class="coopanimal" id="Dinosaur" width="45%"></a></th>
+                    <th><a href="Rabbit.html"><img src="Rabbit.png" class="coopanimal" id="Rabbit" width="65%"></a></th>
                 </tr>
                 <tr>
                     <th>
@@ -69,10 +70,10 @@
             </table>
             <table id="barntable">
                 <tr>
-                    <th><a href="Cow.html"><img src="White Cow.png" class="Cow" width="70%"></a></td>
-                    <th><a href="Goat.html"><img src="Goat.png" class="Goat" width="60%"></a></td>
-                    <th><a href="Sheep.html"><img src="Sheep.png" class="Sheep" width="60%"></a></td>
-                    <th><a href="Pig.html"><img src="Pig.png" class="Pig" width="70%"></a></td>
+                    <th><a href="Cow.html"><img src="White Cow.png" class="barnanimall" id= "Cow" width="70%"></a></td>
+                    <th><a href="Goat.html"><img src="Goat.png" class="barnanimall" id= "Goat" width="60%"></a></td>
+                    <th><a href="Sheep.html"><img src="Sheep.png" class="barnanimall" id= "Sheep" width="60%"></a></td>
+                    <th><a href="Pig.html"><img src="Pig.png" class="barnanimall" id= "Pig" width="70%"></a></td>
                 </tr>
                 <tr>
                     <th>
@@ -94,7 +95,10 @@
                 var WindowWidth = $(window).width();
                 var WindowHeight = $(window).height() / 2;
                 $('table').css({ 'width': WindowWidth, 'height': WindowHeight });
+                $('#coopanimal').css({'width':WindowWidth/10})
+                $('#barnanimal').css({'width':WindowWidth/8})
             </script>
+
 </body>
 
 </html>
