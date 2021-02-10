@@ -1,99 +1,100 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animal List</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
-       body{
+        body {
             margin: 0px;
         }
-        html{
-            cursor: url('data:image/x-icon;base64,AAACAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAR0hoAMjj9wACAgIA5Pr/AJOpxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMzMzMAAAAAAAAAAAAAAAMzMzMzAAAAAAAAAAAAAAADMzMzMwAAAAAAAAAAAzMzMRFEREQzMAAAAAAAAAMzMzERREREMzAAAAAAAAADMzMxEURERDMwAAAzMzMzMRFVUiJVVEREQzMAMzMzMzERVVIiVVREREMzADMzMzMxEVVSIlVURERDMwAzNEREQiJERERERVUREzMAMzREREIiREREREVVERMzADM0RERCIkRERERFVRETMwAAAzMzNVVEREREREQzMAAAAAMzMzVVREREREREMzAAAAADMzM1VURERERERDMwAAAAAAAzNEREQiJEQiIzMAAAAAAAMzREREIiREIiMzAAAAAAADM0RERCIkRCIjMwAAAAAzNERERVVERVUzMAAAAAAAMzREREVVREVVMzAAAAAAADM0RERFVURFVTMwAAAAAzNEREQzMzMzMzMAAAAAAAMzREREMzMzMzMzAAAAAAADM0RERDMzMzMzMwAAAAAAAzNEQzMAAAAAAAAAAAAAAAMzREMzAAAAAAAAAAAAAAADM0RDMwAAAAAAAAAAAAAAAzMzMAAAAAAAAAAAAAAAAAMzMzAAAAAAAAAAAAAAAAADMzMwAAAAAAAAAAAAAAAAD////////////+AP///gD///4A//+AAB//gAAf/4AAHwAAAAMAAAADAAAAAwAAAAMAAAADAAAAA+AAAB/gAAAf4AAAH/wAAB/8AAAf/AAAH+AAAP/gAAD/4AAA/wAAB/8AAAf/AAAH/wB///8Af///AH///wP///8D////A////w=='), auto; 
+
+        html {
+            cursor: url('data:image/x-icon;base64,AAACAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAR0hoAMjj9wACAgIA5Pr/AJOpxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMzMzMAAAAAAAAAAAAAAAMzMzMzAAAAAAAAAAAAAAADMzMzMwAAAAAAAAAAAzMzMRFEREQzMAAAAAAAAAMzMzERREREMzAAAAAAAAADMzMxEURERDMwAAAzMzMzMRFVUiJVVEREQzMAMzMzMzERVVIiVVREREMzADMzMzMxEVVSIlVURERDMwAzNEREQiJERERERVUREzMAMzREREIiREREREVVERMzADM0RERCIkRERERFVRETMwAAAzMzNVVEREREREQzMAAAAAMzMzVVREREREREMzAAAAADMzM1VURERERERDMwAAAAAAAzNEREQiJEQiIzMAAAAAAAMzREREIiREIiMzAAAAAAADM0RERCIkRCIjMwAAAAAzNERERVVERVUzMAAAAAAAMzREREVVREVVMzAAAAAAADM0RERFVURFVTMwAAAAAzNEREQzMzMzMzMAAAAAAAMzREREMzMzMzMzAAAAAAADM0RERDMzMzMzMwAAAAAAAzNEQzMAAAAAAAAAAAAAAAMzREMzAAAAAAAAAAAAAAADM0RDMwAAAAAAAAAAAAAAAzMzMAAAAAAAAAAAAAAAAAMzMzAAAAAAAAAAAAAAAAADMzMwAAAAAAAAAAAAAAAAD////////////+AP///gD///4A//+AAB//gAAf/4AAHwAAAAMAAAADAAAAAwAAAAMAAAADAAAAA+AAAB/gAAAf4AAAH/wAAB/8AAAf/AAAH+AAAP/gAAD/4AAA/wAAB/8AAAf/AAAH/wB///8Af///AH///wP///8D////A////w=='), auto;
         }
-        .Chicken, .Duck, .Dinosaur, .Rabbit{
-            margin-left: 172.5px;
-        }
-        .Cow, .Goat, .Sheep, .Pig{
-            margin-left: 113.8px;
-        }
-        .Coop, .Barn{
-            margin-top: 140px;
-        }
-        .Chicken:hover, .Duck:hover, .Dinosaur:hover, .Rabbit:hover, .Cow:hover, .Goat:hover, .Sheep:hover, .Pig:hover {
+
+        .Chicken:hover,
+        .Duck:hover,
+        .Dinosaur:hover,
+        .Rabbit:hover,
+        .Cow:hover,
+        .Goat:hover,
+        .Sheep:hover,
+        .Pig:hover {
             transform: scale(1.2);
-            cursor: url('data:image/x-icon;base64,AAACAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAR0hoAMjj9wACAgIA5Pr/AJOpxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMzMzMAAAAAAAAAAAAAAAMzMzMzAAAAAAAAAAAAAAADMzMzMwAAAAAAAAAAAzMzMRFEREQzMAAAAAAAAAMzMzERREREMzAAAAAAAAADMzMxEURERDMwAAAzMzMzMRFVUiJVVEREQzMAMzMzMzERVVIiVVREREMzADMzMzMxEVVSIlVURERDMwAzNEREQiJERERERVUREzMAMzREREIiREREREVVERMzADM0RERCIkRERERFVRETMwAAAzMzNVVEREREREQzMAAAAAMzMzVVREREREREMzAAAAADMzM1VURERERERDMwAAAAAAAzNEREQiJEQiIzMAAAAAAAMzREREIiREIiMzAAAAAAADM0RERCIkRCIjMwAAAAAzNERERVVERVUzMAAAAAAAMzREREVVREVVMzAAAAAAADM0RERFVURFVTMwAAAAAzNEREQzMzMzMzMAAAAAAAMzREREMzMzMzMzAAAAAAADM0RERDMzMzMzMwAAAAAAAzNEQzMAAAAAAAAAAAAAAAMzREMzAAAAAAAAAAAAAAADM0RDMwAAAAAAAAAAAAAAAzMzMAAAAAAAAAAAAAAAAAMzMzAAAAAAAAAAAAAAAAADMzMwAAAAAAAAAAAAAAAAD////////////+AP///gD///4A//+AAB//gAAf/4AAHwAAAAMAAAADAAAAAwAAAAMAAAADAAAAA+AAAB/gAAAf4AAAH/wAAB/8AAAf/AAAH+AAAP/gAAD/4AAA/wAAB/8AAAf/AAAH/wB///8Af///AH///wP///8D////A////w=='), auto; 
+            cursor: url('data:image/x-icon;base64,AAACAAEAICAQAAAAAADoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAR0hoAMjj9wACAgIA5Pr/AJOpxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAzMzMzMAAAAAAAAAAAAAAAMzMzMzAAAAAAAAAAAAAAADMzMzMwAAAAAAAAAAAzMzMRFEREQzMAAAAAAAAAMzMzERREREMzAAAAAAAAADMzMxEURERDMwAAAzMzMzMRFVUiJVVEREQzMAMzMzMzERVVIiVVREREMzADMzMzMxEVVSIlVURERDMwAzNEREQiJERERERVUREzMAMzREREIiREREREVVERMzADM0RERCIkRERERFVRETMwAAAzMzNVVEREREREQzMAAAAAMzMzVVREREREREMzAAAAADMzM1VURERERERDMwAAAAAAAzNEREQiJEQiIzMAAAAAAAMzREREIiREIiMzAAAAAAADM0RERCIkRCIjMwAAAAAzNERERVVERVUzMAAAAAAAMzREREVVREVVMzAAAAAAADM0RERFVURFVTMwAAAAAzNEREQzMzMzMzMAAAAAAAMzREREMzMzMzMzAAAAAAADM0RERDMzMzMzMwAAAAAAAzNEQzMAAAAAAAAAAAAAAAMzREMzAAAAAAAAAAAAAAADM0RDMwAAAAAAAAAAAAAAAzMzMAAAAAAAAAAAAAAAAAMzMzAAAAAAAAAAAAAAAAADMzMwAAAAAAAAAAAAAAAAD////////////+AP///gD///4A//+AAB//gAAf/4AAHwAAAAMAAAADAAAAAwAAAAMAAAADAAAAA+AAAB/gAAAf4AAAH/wAAB/8AAAf/AAAH+AAAP/gAAD/4AAA/wAAB/8AAAf/AAAH/wB///8Af///AH///wP///8D////A////w=='), auto;
         }
-        /*.Chicken-t:hover, .Duck-t:hover, .Dinosaur-t:hover, .Rabbit-t:hover, .Cow-t:hover, .Goat-t:hover, .Sheep-t:hover, .Pig-t:hover*/
-        .Chicken-t, .Duck-t, .Dinosaur-t, .Rabbit-t, .Cow-t, .Goat-t, .Sheep-t, .Pig-t{
-            margin: 0px;
+
+        p {
             display: inline;
-        }
-        .Coop-text, .Barn-text{
-            position: absolute;
             font-family: 'Amatic SC', cursive;
-            font-size: 70px;
-            margin-top: 5px;
-
-        }
-        .Chicken-t {
-            margin-left: 160px;
-        }
-        .Duck-t {
-            margin-left: 190px;
-        }
-        .Dinosaur-t {
-            margin-left: 160px;
-        }
-        .Rabbit-t {
-            margin-left: 160px;
-        }
-        .Cow-t{
-            margin-left: 180px;
-        }
-        .Goat-t{
-            margin-left: 220px
-        }
-        .Sheep-t{
-            margin-left: 240px;
-        }
-        .Pig-t{
-            margin-left: 240px;
         }
 
-        
+        img {
+            align-items: center;
+        }
+
 
     </style>
 
 
 </head>
+
 <body>
-    <div class="Coop"> 
-        <a href="Chicken.html"><img src="White Chicken.png" class="Chicken" width="10%"></a>
-        <a href="Duck.html"><img src="Duck.png" class="Duck" width="10%"></a>
-        <a href="Dinosaur.html"><img src="Dinosaur.png" class="Dinosaur" width="10%"></a>
-        <a href="Rabbit.html"><img src="Rabbit.png" class="Rabbit" width="10%"></a>
-        <div class="Coop-text">
-            <p class="Chicken-t">Chicken</p>
-            <p class="Duck-t">Duck</p>
-            <p class="Dinosaur-t">Dinosaur</p>
-            <p class="Rabbit-t">Rabbit</p>
-        </div>
-    </div>
-    <div class="Barn"> 
-        <a href="Cow.html"><img src="White Cow.png" class="Cow" width="15%"></a>
-        <a href="Goat.html"><img src="Goat.png" class="Goat" width="15%"></a>
-        <a href="Sheep.html"><img src="Sheep.png" class="Sheep" width="15%"></a>
-        <a href="Pig.html"><img src="Pig.png" class="Pig" width="15%"></a>
-        <div class="Barn-text">
-            <p class="Cow-t">Cow</p>
-            <p class="Goat-t">Goat</p>
-            <p class="Sheep-t">Sheep</p>
-            <p class="Pig-t">Pig</p>
-        </div>
-    </div>
+            <table id="cooptable">
+                <tr>
+                    <th><a href="Chicken.html"><img src="White Chicken.png" class="Chicken" width="45%"></a></th>
+                    <th><a href="Duck.html"><img src="Duck.png" class="Duck" width="75%"></a></th>
+                    <th><a href="Dinosaur.html"><img src="Dinosaur.png" class="Dinosaur" width="45%"></a></th>
+                    <th><a href="Rabbit.html"><img src="Rabbit.png" class="Rabbit" width="65%"></a></th>
+                </tr>
+                <tr>
+                    <th>
+                        <p id="Chicken-t" style="font-size: 500%;">Chicken</p>
+                    </th>
+                    <th>
+                        <p id="Duck-t" style="font-size: 500%;">Duck</p>
+                    </th>
+                    <th>
+                        <p id="Dinosaur-t" style="font-size: 500%;">Dinosaur</p>
+                    </th>
+                    <th>
+                        <p id="Rabbit-t" style="font-size: 500%;">Rabbit</p>
+                    </th>
+                </tr>
+            </table>
+            <table id="barntable">
+                <tr>
+                    <th><a href="Cow.html"><img src="White Cow.png" class="Cow" width="70%"></a></td>
+                    <th><a href="Goat.html"><img src="Goat.png" class="Goat" width="60%"></a></td>
+                    <th><a href="Sheep.html"><img src="Sheep.png" class="Sheep" width="60%"></a></td>
+                    <th><a href="Pig.html"><img src="Pig.png" class="Pig" width="70%"></a></td>
+                </tr>
+                <tr>
+                    <th>
+                        <p class="Cow-t" style="font-size: 500%;">Cow</p>
+                    </th>
+                    <th>
+                        <p class="Goat-t" style="font-size: 500%;">Goat</p>
+                    </th>
+                    <th>
+                        <p class="Sheep-t" style="font-size: 500%;">Sheep</p>
+                    </th>
+                    <th>
+                        <p class="Pig-t" style="font-size: 500%;">Pig</p>
+                    </th>
+                </tr>
+
+            </table>
+            <script>
+                var WindowWidth = $(window).width();
+                var WindowHeight = $(window).height() / 2;
+                $('table').css({ 'width': WindowWidth, 'height': WindowHeight });
+            </script>
 </body>
+
 </html>
